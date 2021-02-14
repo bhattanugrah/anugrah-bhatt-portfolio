@@ -1,0 +1,323 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #845BB3;
+    font-family: 'Armata', sans-serif;
+}
+
+.logo{
+    color:rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@media screen and (max-width: 600px){
+    .logo{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color:rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px){
+    .nav-links{
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 80vh;
+        top: 8vh;
+        background-color: #494D5F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #494D5F;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg translate(-5px, 6px));
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(-45deg translate(-5px, 6px));
+}
+
+.content{
+    display: flex;
+    float: left;
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.links{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 5%;
+    padding-bottom: 0.5%;
+    font-family: 'Armata', sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    font-style: italic;
+    white-space: pre;
+}
+
+img{
+    width: 2em;
+    height: 2em;
+}
+
+
+.firstIntro{
+    padding-left: 20%;
+    font-size: 2rem;
+    font-weight: normal;
+    font-family: 'Press Start 2P', cursive;
+    color: #4a395c
+}
+
+@media only screen and (max-width: 600px){
+    .firstIntro{
+        padding-left: 0.5em;
+        font-size: 2rem;
+        font-weight: normal;
+        font-family: 'Press Start 2P', cursive;
+        color: #4a395c
+    }
+}
+
+.secondIntro{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Armata', sans-serif;
+    color: white;
+}
+
+@media only screen and (max-width: 600px){
+    .secondIntro{
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Armata', sans-serif;
+        color: white;
+    }
+}
+
+body{
+    background-image: url('https://images.unsplash.com/photo-1554668048-5055c5654bbc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (max-width: 600px){
+    .content{
+        display: flex;
+        float: none;
+        justify-content: center;
+        align-items: center;
+    }
+    html{
+        background-image: url('https://images.unsplash.com/photo-1554668048-5055c5654bbc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80') no-repeat, center, fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow-x: hidden;
+    }
+}
+
+input{
+    width: 40%;
+    height: 30%;
+    margin-bottom: 5%;
+}
+
+.input::placeholder{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.connect{
+    color: #FFF;
+	background-color: #A0D2EB;
+	font-weight: bold;
+    font-size: 1rem;
+	padding: 20px;
+	text-align: center;
+	border: 2px solid #5D6063;
+	border-radius: 5px;
+	width: 200px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+
+.content .btn input[type="submit"]{
+    border: 2px solid #845BB3;
+    margin-top: 15px;
+    padding: 10px;
+    width: 40%;
+    background: #A0D2EB;
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+
+    .connect{
+        color: #FFF;
+        background-color: #A0D2EB;
+        font-weight: bold;
+        font-size: 0.7rem;
+        padding: 20px;
+        text-align: center;
+        border: 2px solid #5D6063;
+        border-radius: 5px;
+        width: 200px;
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+
+    .content .btn input[type="submit"]{
+        border: 2px solid #845BB3;
+        margin-top: 15px;
+        padding: 10px;
+        width: 40%;
+        background: #A0D2EB;
+        color: #332902;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-weight: bold;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+
+    input{
+        width: 80%;
+        height: 30%;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .background-bg{
+        background-image:url('https://images.unsplash.com/photo-1554668048-5055c5654bbc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
