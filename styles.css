@@ -172,11 +172,20 @@ nav{
     white-space: pre;
 }
 
+
 img{
     width: 2em;
     height: 2em;
 }
 
+.linkedin img{
+    width: 2em;
+    height: 2em;
+}
+
+.github img{
+    height: 3em;;
+}
 
 .firstIntro{
     padding-left: 20%;
